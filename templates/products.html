@@ -3,14 +3,14 @@
 
 {% block content %}
 <div class="container py-5">
-    <h2 class="mb-4  fw-bold">All Products</h2>
-
+    <h2 class="mb-4 fw-bold">All Products</h2>
 
     {% if products %}
         <div class="row g-4">
             {% for p in products %}
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="card card-kb h-100 shadow-sm">
+
                         <!-- Product Image -->
                         <div class="position-relative">
                             <img class="card-img-top rounded-3" src="{{ p.image }}" alt="{{ p.title }}">
@@ -24,33 +24,49 @@
 
                         <!-- Card Body -->
                         <div class="card-body d-flex flex-column">
-                            <!-- Title with truncation if > 8 characters -->
-                            <h5 class="card-title">
-                                {% if p.title|length > 8 %}
+
+                            <!-- Title -->
+
+                            <div class="mt-3 d-flex justify-content-between align-items-start">
+                              <div>
+                                <div class="text fw-semibold fs-4 mb-2">
+                                  {% if p.title|length > 8 %}
                                     {{ p.title[:8] }}...
                                 {% else %}
                                     {{ p.title }}
                                 {% endif %}
-                            </h5>
+                                </div>
+                                <p class="text small text-soft fs-5">
+                                   {{ p.description[:15] }}{% if p.description|length > 15 %}...{% endif %}
+                                </p>
+                              </div>
+                              <div class="price">${{ "%.2f"|format(p.price) }}</div>
+                            </div>
 
-                            <!-- Description truncated at 25 characters -->
-                            <p class="card-text text-muted">
-                                {{ p.description[:25] }}{% if p.description|length > 25 %}...{% endif %}
-                            </p>
 
-                            <div class="mt-auto d-flex justify-content-between align-items-center">
-                                <div class="price fw-bold">${{ "%.2f"|format(p.price) }}</div>
-                                <!-- Working Add to Cart Link -->
-                                <a href="{{ url_for('add_to_cart', id=p.id) }}" class="btn btn-pill-primary btn-sm">
+                            <!-- Price + Add to Cart -->
+                            <div class="mt-auto d-flex justify-content-between align-items-center mb-2">
+
+
+                                <a href="{{ url_for('add_to_cart', id=p.id) }}"
+                                   class="btn btn-pill-primary btn-sm">
                                     <i class="bi bi-bag me-1"></i>Add to Cart
                                 </a>
+                                 <a href="{{ url_for('product_detail', id=p.id) }}"
+                                   class="btn btn-outline-primary btn-sm">
+                                    <i class="bi bi-eye me-1"></i>View Detail
+                            </a>
                             </div>
+
+                            <!-- ⭐ View Detail Button -->
+
+
+
                         </div>
                     </div>
                 </div>
-                {% endfor %}
-            </div>
-
-        {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
 </div>
 {% endblock %}

@@ -1,0 +1,37 @@
+<div class="row g-4">
+                  <!-- Card 1 -->
+                  <div class="pro-list col-12 col-md-6 col-lg-4">
+                    <a class="text-decoration-none" href="{{ url_for('product_detail', id=p.id) }}">
+                      </a><div class="pro-list-card card-kb position-relative p-3 h-100"><a class="text-decoration-none" href="{{ url_for('product_detail', id=p.id) }}">
+                        <img class="product-img w-100 border" src="{{ p.image }}" alt="{{ p.title }}">
+                        <span style="left: 15px" class="badge badge-verified position-absolute m-2">Verified
+                          <i class="bi bi-patch-check-fill"></i>
+                        </span>
+                        <div class="mt-3 d-flex justify-content-between align-items-start">
+                          <div>
+                            <div class="text fw-semibold fs-4 mb-2">
+                              {{ product.title }}
+                            </div>
+                            <p class="text small text-soft fs-5">
+                              {{ product.description }}
+                            </p>
+                          </div>
+                          <div class="price">${{ "%.2f"|format(p.price) }}</div>
+                        </div>
+                      </a><div class="d-flex gap-2 mt-3"><a class="text-decoration-none" href="product-detail.html">
+                          <a href="{{ url_for('add_to_cart', id=p.id) }}" class="btn align-content-center px-3 btn-pill-primary"><i class="bi bi-arrow-right me-1"></i>Add to cart</a>
+                          <a href="/add_to_cart/{{ product.id }}" class="btn align-content-center px-3 btn-pill-primary"><i class="bi bi-arrow-right me-1"></i>Veiw Product Detail</a>
+                        </div>
+                      </div>
+
+                  </div>
+
+
+                  <div class="btn-control-pro-list">
+                    <button type="button" id="showMoreBtn" class="btn-see-more text-decoration-underline p-0">
+                      មើលច្រើនទៀត
+                    </button>
+                  </div>
+
+                  <!-- អ្នកអាចបន្ថែម card 9, 10 ... ដូច structure ខាងលើ -->
+                </div>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{% block title %}KhmerBoost{% endblock %}</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"/>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Suwannaphum:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}">
+</head>
+
+<body>
+
+<!-- Announcement -->
+
+
+<header>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-xl py-0">
+      <div class="container">
+        <a class="navbar-brand" href="{{ url_for('products') }}">
+          <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo-kb">
+        </a>
+
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+          <i class="bi bi-list-nested fs-1"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav me-2 mb-2 mb-lg-0">
+
+
+            <li class="nav-item dropdown dropdown-mega">
+              <a class="nav-link kb-underline" href="{{ url_for('products') }}">Product</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('about') }}">About Us</a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
+            </li>
+          </ul>
+
+          <!-- Search -->
+          <form method="get" class="d-none d-lg-flex pill-search w-25 position-relative">
+            <!-- Add name="q" so Flask can read request.args.get("q") -->
+            <input class="form-control w-100" name="q" placeholder="Search Product" value="{{ search_query }}">
+
+            <button type="submit" class="btn border-0 ms-0 btn-pill-primary">
+                <i class="bi bi-search"></i>
+            </button>
+          </form>
+
+          <ul class="navbar-nav ms-0 ms-lg-4 align-items-center d-none d-lg-flex">
+            <li class="nav-item dropdown me-2">
+                  <button
+                    data-theme-toggle
+                    class="btn btn-theme-mode"
+                    aria-pressed="false"
+                    title="Toggle theme"
+                  >
+                    <i class="bi bi-sun"></i>
+                  </button>
+                </li>
+            <li class="nav-item me-2 position-relative">
+                <a href="{{ url_for('cart') }}" class="nav-link position-relative">
+                    <i class="bi bi-cart3"></i>
+                    <span class="badge rounded-pill bg-warning text-dark">{{ cart_count }}</span>
+                </a>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main>
+
+  {% block content %}
+  {% endblock %}
+
+</main>
+
+<!-- FOOTER -->
+{% if not hide_footer %}
+    <footer class="footer-framed py-3">
+      <div class="container footer-inner">
+        <div class="row g-4 align-items-center mb-4">
+          <div class="col-lg-7">
+            <div class="d-flex align-items-center gap-3">
+              <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo-footer">
+              <p class="mb-0 text-footer">បណ្តាញពាណិជ្ជកម្មសម្រាប់កម្ពុជា</p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="footer-sep" />
+
+        <div class="row g-5">
+          <div class="col-md-4">
+            <h6 class="fw-semibold mb-3 text-title">About KhmerBoost</h6>
+            <p class="text-footer">វេទិកាពាណិជ្ជកម្មសហការដែលភ្ជាប់អ្នកផលិត អ្នកលក់ និងអ្នកទិញ។</p>
+          </div>
+
+          <div class="col-md-4">
+            <h6 class="fw-semibold mb-3 text-title">Quick Links</h6>
+            <ul class="list-unstyled link-grid">
+              <li><a class="footer-link" href="{{ url_for('products') }}">ផលិតផល</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <h6 class="fw-semibold mb-3 text-title">Contact</h6>
+            <ul class="list-unstyled text-footer">
+              <li><i class="bi bi-telephone me-2"></i> +855 12 345 678</li>
+              <li><i class="bi bi-envelope me-2"></i> hello@khmerboost.com</li>
+              <li><i class="bi bi-geo-alt me-2"></i> Phnom Penh, Cambodia</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-4 pt-3 small text-footer-weak">
+          © <span id="year"></span> KhmerBoost. All rights reserved.
+        </div>
+      </div>
+    </footer>
+{% endif %}
+
+<!-- JS -->
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/themeMode.js') }}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+<script> new PureCounter(); </script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</body>
+</html>

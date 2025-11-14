@@ -1,0 +1,154 @@
+{% extends "layout.html" %}
+{% block title %}អំពីយើង - About Us{% endblock %}
+
+{% block content %}
+<main>
+  <!-- HERO -->
+  <section class="hero-about text-white py-5">
+    <div class="container rounded-4 gx-0" data-aos="fade-up" data-aos-duration="800"
+         style="background: url({{ url_for('static', filename='assets/images/about.jpg') }});
+                background-size: cover; background-position: center;">
+      <div class="hero-overlay-about rounded-4">
+        <div class="row align-items-center py-4">
+          <div class="col-lg-8">
+            <div>
+              <span class="pill mb-3" style="color: var(--bs-text) !important;">
+                <i class="bi bi-stars"></i> អំពីយើង (About Us)
+              </span>
+              <h1 class="display-5 fw-bold text-white">
+                បង្កើតសហគមន៍ពាណិជ្ជកម្មខ្មែរ ដោយបច្ចេកវិទ្យា និងទំនុកចិត្ត
+              </h1>
+              <p class="lead mt-3">
+                KhmerBoost ជាវេទិកាដែលភ្ជាប់អ្នកផលិត អ្នកលក់ និងអ្នកទិញ
+                ដើម្បីលើកកម្ពស់ផលិតផលខ្មែរ និងវប្បធម៌។
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY / TIMELINE -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+        <h3 class="section-title">គោលបំណង</h3>
+      </div>
+      <div class="row g-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+        <div class="col-lg-12">
+          <div class="card-surface p-4 h-100 d-flex flex-column justify-content-center">
+            <h5 class="fw-bold">មូលហេតុដែលយើងមាន</h5>
+            <p class="mb-0 text-secondary">
+              បង្កើតឡើងដើម្បីជួយពាណិជ្ជករ អាចភ្ជាប់ដោយផ្ទាល់ទៅកាន់អតិថិជនបានយ៉ាងមានប្រសិទ្ធភាព
+              និងទុកចិត្តបាន។ វេទិកានេះផ្តោតលើការលើកកម្ពស់ផលិតផល និងស្នាដៃក្នុងស្រុក ដូចជា ផលិតផលប្រពៃណីខ្មែរ, សិល្បៈ,
+              អាហារប្រពៃណី, និងគ្រឿងអនុស្សាវរីយ៍ទេសចរណ៍។
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION / VISION / VALUES -->
+  <section id="mission" class="py-5">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+        <h3 class="section-title">បេសកកម្ម • ចក្ខុវិស័យ • តម្លៃ</h3>
+      </div>
+      <div class="row g-4">
+        <!-- Mission -->
+        <div class="col-12 col-md-4">
+          <div class="card-surface h-100 p-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-rocket"></i>
+              <h5 class="m-0">Mission</h5>
+            </div>
+            <p class="text-secondary">
+              បេសកកម្មរបស់ KhmerBoost គឺជួយលើកកម្ពស់សហគមន៍ MSMEs ខ្មែរ
+              តាមរយៈវេទិកាឌីជីថលដែលមានសុវត្ថិភាព ទុកចិត្តបាន និងងាយស្រួលប្រើ។ យើងមានបំណងបង្កើតឱកាសអោយអ្នកផលិត
+              និងអ្នកលក់ក្នុងស្រុក អាចដល់ទៅកាន់អតិថិជនថ្មីៗ និងមានទីផ្សារធំជាងមុន។
+            </p>
+          </div>
+        </div>
+        <!-- Vision -->
+        <div class="col-12 col-md-4">
+          <div class="card-surface h-100 p-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-eyeglasses"></i>
+              <h5 class="m-0">Vision</h5>
+            </div>
+            <p class="text-secondary">
+              យើងមានចក្ខុវិស័យក្នុងការក្លាយជាមូលដ្ឋានសំខាន់មួយ សម្រាប់ផលិតផល និងវប្បធម៌ខ្មែរ
+              ដែលអាចភ្ជាប់មនុស្សទូទាំងប្រទេស និងអន្តរជាតិ។ KhmerBoost ចង់កសាងអេកូស៊ីស្ទឹមសហគមន៍ដែលអាចជំរុញឱ្យផលិតផលខ្មែរទទួលបានការទទួលស្គាល់ និងឥទ្ធិពលកាន់តែច្រើន។
+            </p>
+          </div>
+        </div>
+        <!-- Values -->
+        <div class="col-12 col-md-4">
+          <div class="card-surface h-100 p-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-heart"></i>
+              <h5 class="m-0">Values</h5>
+            </div>
+            <ul class="text-secondary m-0 ps-3 small">
+              <li>ទំនុកចិត្ត និងតម្លាភាព៖ យើងជឿថាការបង្កើតសេវាដែលអាចទុកចិត្តបានគឺជាគន្លងសំខាន់ក្នុងការអភិវឌ្ឍសហគមន៍។</li>
+              <li>សហគមន៍៖ ជាមូលដ្ឋានសម្រាប់ភាពជោគជ័យ និងការរីកចម្រើនរបស់យើង។</li>
+              <li>គុណភាព និងបេតិកភណ្ឌ៖ យើងគោរពដល់គុណភាពផលិតផល និងតម្លៃវប្បធម៌ខ្មែរ ដើម្បីអោយជំនាន់ក្រោយមានអារម្មណ៍ភ្ញាក់ផ្អើលនូវអ្វីដេលយើងមាន។</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION COUNTER -->
+  <section class="py-5 counter-area">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-lg-3">
+          <div class="glass-soft p-4 h-100">
+            <i class="bi bi-shop fs-1 text-support"></i>
+            <div data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="2"
+                 class="purecounter fs-2 fw-bold"></div>
+            <div class="text-support fs-4">អ្នកលក់</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="glass-soft p-4 h-100">
+            <i class="bi bi-box mx-2 text-support fs-1"></i>
+            <div data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="2"
+                 class="purecounter fs-2 fw-bold"></div>
+            <div class="text-support fs-4">ផលិតផល</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="glass-soft p-4 h-100">
+            <i class="bi bi-clipboard-check fs-1 text-support"></i>
+            <div data-purecounter-start="0" data-purecounter-end="1500" data-purecounter-duration="2"
+                 class="purecounter fs-2 fw-bold"></div>
+            <div class="text-support fs-4">ការបញ្ជាទិញ</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="glass-soft p-4 h-100">
+            <i class="bi bi-hand-thumbs-up fs-1 text-support"></i>
+            <div data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="2"
+                 data-purecounter-suffix="%" class="purecounter fs-2 fw-bold"></div>
+            <div class="text-support fs-4">ការពេញចិត្ត</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNER -->
+
+
+  <!-- TEAM -->
+
+
+  <!-- OUR THANK -->
+
+</main>
+{% endblock %}

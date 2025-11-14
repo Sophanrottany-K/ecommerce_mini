@@ -1,0 +1,353 @@
+/* authentication form */
+.main-login .blur {
+  background-color: rgba(0, 0, 0, 0.411) !important;
+  /* filter: blur(2px); */
+  backdrop-filter: blur(10px);
+}
+
+@font-face {
+  font-family: kantumruy;
+  src: url("../fonts/KantumruyPro-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main-login {
+  height: 100vh;
+  font-family: kantumruy;
+}
+.main-login .card-body {
+  height: 600px;
+}
+.main-login .card-body img {
+  width: 100%;
+}
+.main-login .header {
+  width: 100%;
+}
+.main-login .header img {
+  width: 60px;
+}
+
+.overlay-login {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.main-login .swiper {
+  height: 600px;
+  border-radius: 20px !important;
+}
+.main-login .swiper-slide {
+  border-radius: 20px !important;
+}
+.main-login .swiper .swiper-wrapper {
+  height: 100%;
+  border-radius: 20px !important;
+}
+.main-login .swiper .main-login-img {
+  border-radius: 20px !important;
+  height: 100% !important;
+}
+.main-login .txt-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 120;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 0 4px rgb(226, 196, 25);
+}
+
+.main-login .login-overlay-txt {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 20px);
+  height: 20%;
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.main-login .link-back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 200px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  color: #ffffff;
+}
+.main-login .link-back:hover i {
+  transform: translateX(-5px) !important;
+  transition: 0.3s;
+}
+.main-login .txt-design {
+  position: absolute;
+  bottom: 10px;
+  right: 140px;
+  font-size: 15px;
+  font-family: monospace;
+}
+
+/* btn */
+.main-login form .input input {
+  padding: 12px 20px;
+}
+.main-login .btn-primary {
+  background-color: goldenrod;
+  color: rgb(255, 255, 255);
+  border: 1px solid darkgoldenrod;
+  transition: 0.3s;
+}
+.main-login .btn-primary:hover {
+  background-color: darkgoldenrod;
+  color: rgb(0, 0, 0);
+  border: 1px solid goldenrod;
+}
+.main-login .btn-primary:checked {
+  background-color: rgba(255, 196, 1, 0.4);
+}
+.main-login form .form-label {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* ======== invalidation form =============== */
+.main-login .form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(218, 165, 32, 0.4);
+  border: 1px solid gold;
+}
+.main-login .invalid-feedback {
+  padding-inline-start: 10px !important;
+  color: darkgoldenrod;
+}
+/*  << invalidation valid >> */
+
+.main-login .was-validated .form-control:valid,
+.form-control.is-valid {
+  background-image: none;
+  border: 1px solid rgb(158, 114, 1);
+
+}
+.main-login .was-validated .form-control:valid:focus,
+.form-control.is-valid:focus {
+  background-image: none;
+  border: 1px solid rgb(255, 183, 0);
+  box-shadow: 0 0 0 0.25rem rgb(218, 165, 32);
+}
+
+.main-login .was-validated .form-check-input:valid,
+.form-check-input.is-valid,
+.main-login .was-validated .form-check-input:valid ~ .form-check-label,
+.form-check-input.is-valid ~ .form-check-label {
+  border-color: rgb(255, 183, 0);
+  color: #000000 !important;
+}
+.main-login .was-validated .form-check-input:valid:checked,
+.form-check-input.is-valid:checked {
+  background-color: gold;
+}
+/*  << invalidation invalid >> */
+.main-login .was-validated .form-control:invalid,
+.form-control.is-invalid {
+  background-image: none;
+  border: 1px solid rgb(255, 183, 0);
+}
+
+.main-login .was-validated .form-control:invalid:focus,
+.form-control.is-invalid:focus {
+  border: 1px solid goldenrod;
+  box-shadow: 0 0 0 0.25rem rgba(218, 165, 32,0.4);
+}
+
+
+.main-login .was-validated .form-check-input:invalid,
+.form-check-input.is-invalid,
+.main-login .was-validated .form-check-input:invalid ~ .form-check-label,
+.form-check-input.is-invalid ~ .form-check-label {
+  border-color: goldenrod;
+  color: #000000 !important;
+}
+
+/* ======================================== */
+
+.main-login .description {
+  font-size: 18px;
+}
+.main-login .form-check {
+  padding-left: 0.5rem !important;
+}
+.main-login .form-check .form-check-input {
+  margin-inline-end: 0.5rem;
+  margin-left: 0.4em !important;
+}
+.main-login .form-check-input:checked {
+  background-color: goldenrod;
+  border-color: darkgoldenrod;
+}
+.main-login .form-check-input {
+  box-shadow: none !important;
+}
+.main-login .forgot-password {
+  color: rgb(0, 0, 0);
+  transition: 0.3s ease;
+}
+
+.main-login .forgot-password:hover {
+  color: rgb(185, 134, 4);
+}
+
+.shadow-both {
+  box-shadow: 4px 4px 30px rgba(128, 128, 128, 0.5);
+}
+
+/* =========== card login design ================ */
+.main-login .card-modern {
+  background-color: #ffffff88;
+  padding: 25px 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 60px 20px rgba(128, 128, 128, 0.5);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 10;
+}
+.btn-close {
+  --bs-btn-close-color: #00000000;
+  --bs-btn-close-bg: none;
+}
+@media (max-width: 1224px) {
+  .main-login .card-modern .header .title {
+    font-size: 24px;
+  }
+  .main-login .card-modern .header .description {
+    font-size: 16px;
+  }
+  .main-login .card-modern form .form-label {
+    font-size: 19px !important;
+  }
+  .main-login form .input input {
+    padding: 8px 20px;
+  }
+}
+
+/* ============================================== */
+
+/* ===== verify ======= */
+.main-login .mt-10,
+.main-login .verify {
+  margin-top: 20px !important;
+}
+.form-verity .code-verify {
+  width: 70px;
+  height: 70px;
+  /* padding: 20px 25px; */
+  padding-inline: 27px;
+  border: 2px solid rgba(0, 0, 0, 0.363);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: transparent;
+  color: #000;
+  font-size: 20px;
+}
+.form-verity input {
+  padding: 12px 20px;
+}
+
+ .otp-input input::-webkit-outer-spin-button,
+ .otp-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+ .otp-input input[type="number"] {
+  -moz-appearance: textfield;
+}
+.verify button {
+  background-color: #4caf50;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+}
+.verify button:hover {
+  background-color: #45a049;
+}
+.verify button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+.verify #timer {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  color: rgba(255, 154, 2, 0.7);
+}
+
+/* ======= end verify ========== */
+
+/* ======= Responsive ========== */
+@media (max-width: 991px) {
+  .main-login .card-body {
+    height: 400px;
+  }
+  .main-login .card-body img {
+    width: 100%;
+  }
+
+  /* ==== verify ===== */
+  .form-verity .code-verify {
+    width: 70px;
+    height: 70px;
+    /* padding: 20px 25px; */
+    padding-inline: 25px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 576px) {
+  /* ==== verify ===== */
+  .form-verity .code-verify {
+    width: 55px;
+    height: 55px;
+    /* padding: 20px 25px; */
+    padding-inline: 20px;
+  }
+}
+@media (max-width: 370px) {
+  /* ==== verify ===== */
+  .form-verity .code-verify {
+    width: 45px;
+    height: 45px;
+    /* padding: 20px 25px; */
+    padding-inline: 20px;
+  }
+}
+
+/* end authentication form */

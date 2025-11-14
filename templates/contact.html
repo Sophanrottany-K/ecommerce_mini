@@ -1,0 +1,147 @@
+{% extends 'layout.html' %}
+{% block title %}Contact Us{% endblock %}
+{% block content %}
+<section class="contact-area position-relative">
+        <div class="col-12">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31269.142252699163!2d104.90384559999998!3d11.5774458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1skm!2skh!4v1757149174614!5m2!1skm!2skh"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <div class="container position-relative">
+          <div
+            class="row gx-3 py-4 px-5 bg-contact w-100 align-items-center d-inline-flex position-absolute shadow-lg"
+            style="left: 50%; transform: translateX(-50%); top: -200px"
+          >
+            <div class="col-12 col-sm-6">
+              <div class="card">
+                <form
+                  action="{{ url_for('contact_submit') }}"
+                  method="post"
+                  id="contactForm"
+                  novalidate="novalidate">
+                  <div class="mb-3 form-group">
+                        <label  class="form-label text-allTheme"
+                          >Full Name</label
+                        >
+                        <input
+                          type="text" class="form-control" id="name" name="name" placeholder="Enter your name"
+                          required
+                        />
+                  </div>
+                  <div class="mb-3 form-group">
+                    <label for="" class="form-label text-allTheme"
+                      >Email</label
+                    >
+                    <input
+                      class="form-control"
+                      id="email"
+                      type="email"
+                      name="email"
+                      placeholder="Enter your Email"
+                      required
+                    />
+                  </div>
+                    <div class="mb-3 form-group">
+                    <label for="" class="form-label text-allTheme"
+                      >Subject</label
+                    >
+                    <input
+                      class="form-control"
+                      id="subject"
+                      name="subject"
+                      type="text"
+                      placeholder="Enter Subject"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3 form-group">
+                    <label for="" class="form-label text-allTheme"
+                      >Phone Number</label
+                    >
+                    <input
+                      class="form-control"
+                      id="phone"
+                      type="text"
+                      name="phone"
+                      placeholder="Phone Number (optional)"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3 form-group">
+                    <label for="" class="form-label text-allTheme">Comments</label>
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      name="message"
+                      rows="3"
+                      placeholder="Message..."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-pill-primary">
+                    <i class="bi bi-send-fill"></i> Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <h2 class="mb-3 text-center mt-md-0 mt-5">ទំនាក់ទំនង់ពួកយើង</h2>
+              <div class="card justify-content-center align-items-center">
+                <!-- <p class="text-allTheme px-2 text-center fs-5 mb-4">វេទិកាពាណិជ្ជកម្មដែលសហការភ្ជាប់អ្នកផលិត
+                                អ្នកលក់ និងអ្នកទិញក្នុងប្រទេស ដោយផ្តោតលើភាពទុកចិត្ត និងការផ្ទៀងផ្ទាត់។</p> -->
+                <ul class="contact-info gx-5">
+                  <li class="col-12 col-md-6">
+                    <a href="#" class="contact-link">
+                      <i class="bi bi-telephone-outbound"></i>
+                      <h5>
+                        <span>ជំនួយបច្ចេកទេស</span>
+                      </h5>
+                      <p>098278939</p>
+                    </a>
+                  </li>
+                  <li class="col-12 col-md-6">
+                    <a href="#" class="contact-link">
+                      <i class="bi bi-facebook"></i>
+                      <h5>
+                        <span>facebook</span>
+                      </h5>
+                      <p>KhmerBoots</p>
+                    </a>
+                  </li>
+
+                  <li class="col-12 col-md-6">
+                    <a href="https://t.me/khmer_boost" class="contact-link">
+                      <i class="bi bi-telegram"></i>
+                      <h5>
+                        <span>Telegram</span>
+                      </h5>
+                      <p>KhmerBoot</p>
+                    </a>
+                  </li>
+                  <li class="col-12 col-md-6">
+                    <a href="#" class="contact-link">
+                      <i class="bi bi-envelope"></i>
+                      <h5>
+                        <span>Email</span>
+                      </h5>
+                      <p>KhmerBoot@gmail.com</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+</section>
+
+
+{% endblock %}
